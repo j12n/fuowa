@@ -1,0 +1,11 @@
+{
+  "name": "Fuowa",
+  "version": "0.1",
+  "description": "Fix OWA on Linux~",
+  "permissions": ["webRequest", "webRequestBlocking", "*://mail.{your_domain}.com/*"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "manifest_version": 2
+}
