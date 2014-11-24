@@ -1,4 +1,4 @@
-var userAgentOverride = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:7.0.1) Gecko/20100101 Firefox/7.0.1";
+var userAgentOverride = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:21.0) Gecko/20130331 Firefox/21.0";
 
 chrome.webRequest.onBeforeSendHeaders.addListener(
   function(details) {
@@ -10,5 +10,5 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
     }
     return { requestHeaders: details.requestHeaders };
   },
-  {urls: ["*://mail.{your_domain}.com/owa/*"]},
+  {urls: ["*://mail.{your_domain}.com/owa/*", "*://legacy.{your_domain}.com/owa/*"]},
   ["blocking", "requestHeaders"]);
